@@ -1,59 +1,66 @@
+import React from 'react';
+import { Row, Col, Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
+import Home from './Home';
+import About from './About';
+import Contact from './Contact';
+import Services from './Services';
 
 function Header(){
 
 
     return(
-        <header>
-            <div class="logo-left">
-                <div class="card text-white bg-primary mb-3" style={ {maxWidth:"20rem,"} }>
-                    <div class="card-body">
-                        <h4 class="card-title">Primary card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarColor02">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                        <a class="nav-link active" href="#">Home
-                            <span class="visually-hidden">(current)</span>
-                        </a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
-                        </div>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-sm-2" type="text" placeholder="Search" />
-                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                    </div>
-                </div>
-            </nav>
+        <header >
+            <Router>
+                <Container>
+                    <Row>
+                        <Col xs={1}>
+                            <Container>IMG</Container>    
+                        </Col>
+                        <Col>
+                            <Navbar bg="light" expand="lg">
+                                <Container>
+                                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                                    <Navbar.Collapse id="basic-navbar-nav">
+                                    <Nav className="me-auto">
+                                        <Nav.Link><Link to="/">Home</Link></Nav.Link>
+                                        <Nav.Link><Link to="/about">about</Link></Nav.Link>
+                                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                                        <NavDropdown.Divider />
+                                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                                        </NavDropdown>
+                                    </Nav>
+                                    </Navbar.Collapse>
+                                </Container>
+                            </Navbar>
+                        </Col>
+                    </Row>
+                </Container>
+                <Switch>
+                    <Route path="/about">
+                    <About />
+                    </Route>
+                    <Route path="/services">
+                    <Services />
+                    </Route>
+                    <Route path="/contact">
+                    <Contact />
+                    </Route>
+                    <Route path="/">
+                    <Home />
+                    </Route>
+                </Switch>
+            </Router>
         </header>
     )
 }

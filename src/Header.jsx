@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import {
     BrowserRouter as Router,
     Switch,
@@ -12,40 +12,32 @@ import About from './About';
 import Contact from './Contact';
 import Services from './Services';
 
+import brandLogo from './Resources/Images/atmosphaire-logo.png';
+
 function Header(){
 
 
     return(
         <header >
             <Router>
-                <Container>
-                    <Row>
-                        <Col xs={1}>
-                            <Container>IMG</Container>    
-                        </Col>
-                        <Col>
-                            <Navbar bg="light" expand="lg">
-                                <Container>
-                                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-                                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                                    <Navbar.Collapse id="basic-navbar-nav">
-                                    <Nav className="me-auto">
-                                        <Nav.Link><Link to="/">Home</Link></Nav.Link>
-                                        <Nav.Link><Link to="/about">about</Link></Nav.Link>
-                                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                        <NavDropdown.Divider />
-                                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                                        </NavDropdown>
-                                    </Nav>
-                                    </Navbar.Collapse>
-                                </Container>
-                            </Navbar>
-                        </Col>
-                    </Row>
-                </Container>
+                <Navbar variant="dark" expand="lg">
+                    <Navbar.Brand><Link to="/"><img src={brandLogo} /></Link></Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link><Link to="/">Home</Link></Nav.Link>
+                        <Nav.Link><Link to="/about">about</Link></Nav.Link>
+                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                        <NavDropdown.Item><Link to="/services">Services</Link></NavDropdown.Item>
+                        <NavDropdown.Item>Link 1</NavDropdown.Item>
+                        <NavDropdown.Item>Link 2</NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item>Separated link</NavDropdown.Item>
+                        </NavDropdown>
+                        <Nav.Link><Link to="/contact">Contact</Link></Nav.Link>
+                    </Nav>
+                    </Navbar.Collapse>
+                </Navbar>
                 <Switch>
                     <Route path="/about">
                     <About />

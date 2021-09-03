@@ -8,11 +8,17 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
+import Carousel_1 from './Resources/Images/Carousel-1.jpg';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
-  {
+    {
+        label: 'With the exclusive attention of your stylist, your smile is our goal, your joy is our reward.',
+        imgPath:
+            Carousel_1,
+    },
+    {
     label: 'San Francisco – Oakland Bay Bridge, United States',
     imgPath:
       'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
@@ -52,11 +58,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.default,
   },
   img: {
-    height: 300,
-    display: 'block',
-    maxWidth: window.innerwidth-25,
+    height:300,
+    display: 'inline-block',
+    maxWidth: window.innerwidth,
     overflow: 'hidden',
-    width: '90%',
   },
 }));
 

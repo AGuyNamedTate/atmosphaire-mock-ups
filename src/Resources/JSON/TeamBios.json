@@ -1,0 +1,30 @@
+[
+        {
+            "key":1,
+            "name":"Name 1",
+            "src":null,
+            "bio":"This is a bio",
+            "contacts":[
+                "Facebook","twitter","instagram"
+            ]
+        },
+        {
+            "key":2,
+            "name":"Name 2",
+            "src":null,
+            "bio":"This is a bio",
+            "contacts":[
+                "Facebook","twitter","instagram"
+            ]
+        },
+        {
+            "key":3,
+            "name":"Name 3",
+            "src":null,
+            "bio":"This is a bio",
+            "contacts":[
+                "Facebook","email","instagram"
+            ]
+        }
+]
+

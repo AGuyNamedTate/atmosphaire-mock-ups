@@ -3,9 +3,15 @@ import {Row, Col} from 'react-bootstrap';
 
 function Contact(){
     return (
-        <div>
-            <div>
-                <h1>Contact</h1>
+        <div className="Contact">
+            <div className="jumbotron">
+                <h1 className="display-4">Contact</h1>
+                <p className="lead">This is where our banner will go</p>
+                <hr className="my-4" />
+                <p>This is a seperate section</p>
+                <p className="lead">
+                    <a className="btn btn-primary btn-lg" href="#Contact" role="button">This is a link</a>
+                </p>
             </div>
             <div>
                 <Row>

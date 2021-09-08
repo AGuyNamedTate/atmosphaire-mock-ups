@@ -11,6 +11,7 @@ import Home from './Home';
 import About from './About';
 import Contact from './Contact';
 import Services from './Services';
+import Team from './Team';
 
 import brandLogo from './Resources/Images/atmosphaire-logo.png';
 
@@ -29,8 +30,8 @@ function Header(){
                         <Nav.Link className="nav-item"><Link to="/about" className="nav-link">About</Link></Nav.Link>
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown" className="nav-item dropdown" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                             <NavDropdown.Item className="dropdown-item"><Link to="/services">Services</Link></NavDropdown.Item>
-                            <NavDropdown.Item className="dropdown-item">Link 1</NavDropdown.Item>
-                            <NavDropdown.Item className="dropdown-item">Link 2</NavDropdown.Item>
+                            <NavDropdown.Item className="dropdown-item"><Link to="/team">Our Team</Link></NavDropdown.Item>
+                            <NavDropdown.Item className="dropdown-item">Link</NavDropdown.Item>
                             <NavDropdown.Divider className="dropdown-divider" />
                             <NavDropdown.Item className="dropdown-item">Separated link</NavDropdown.Item>
                         </NavDropdown>
@@ -44,16 +45,19 @@ function Header(){
                 </Navbar>
                 <Switch>
                     <Route path="/about">
-                    <About />
+                        <About />
                     </Route>
                     <Route path="/services">
-                    <Services />
+                        <Services />
                     </Route>
                     <Route path="/contact">
-                    <Contact />
+                        <Contact />
+                    </Route>
+                    <Route path="/team">
+                        <Team />
                     </Route>
                     <Route path="/">
-                    <Home />
+                        <Home />
                     </Route>
                 </Switch>
             </Router>

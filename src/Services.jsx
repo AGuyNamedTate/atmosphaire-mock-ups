@@ -1,9 +1,9 @@
 import React from 'react';
-
+import banner from './Resources/Images/servicesbanner.jpg';
 function Services(){
     return(
         <div className="Services">
-           <div className="jumbotron">
+           <div className="jumbotron" style={{backgroundImage:`url(${banner})`, backgroundPosition: "center",backgroundRepeat: "no-repeat",backgroundSize: "cover"}}>
                 <h1 className="display-4">Services</h1>
                 <p className="lead">This is where our banner will go</p>
                 <hr className="my-4" />

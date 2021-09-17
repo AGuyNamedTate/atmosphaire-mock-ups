@@ -1,36 +1,91 @@
 [
         {
             "key":1,
-            "name":"Name 1",
-            "title":"Position Title",
-            "subtitle":"sub title",
-            "src":"https://media.istockphoto.com/photos/female-hairdresser-standing-in-salon-picture-id853924196?s=612x612",
-            "bio":"This is a bio",
+            "name":"Brae Carnes",
+            "bio":"Brae Carnes is a master stylist trained at the Aveda Institute of Victoria. She received a comprehensive and rigorous education which she utilizes in salon today. Priding herself in her multi-faceted approach to hair, she specializes in everything from short fades, colour, blondes, extensions, and cuts. With a love of all things fashion and experience working as a model she is always on the forefront of new trends and taking inspiration from runway shows and pop culture. Inclusivity is extremely important to both Brae and her business, using gender neutral pricing and bookings. As a Trans rights activist and educator her chair as a safe space for anyone in the LGBTQ2S+ community, offering affirming services and an in depth knowledge of the queer experience. For neurodiverse clients and those wanting privacy she is also available for Sunday bookings when the salon is emptier and quiet.",
             "contacts":[
-                "Facebook","phone","instagram"
+              {"name":"Facebook", "src":"", "key":1},
+              {"name":"Instagram", "src":"", "key":2},
+              {"name":"Twitter", "src":"", "key":3},
+              {"name":"LinkedIn", "src":"", "key":4},
+              {"name":"Email", "src":"", "key":5},
+              {"name":"Phone", "src":"", "key":6},
+              {"name":"Book Online", "src":"", "key":7}
+            ],
+            "media":[
+              {
+                "tag":"img",
+                "src":"Brae Carnes.jpg",
+                "alt":"Brae Carnes",
+                "key":1
+              }
             ]
         },
         {
             "key":2,
-            "name":"Name 2",
-            "title":"Position Title",
-            "subtitle":"",
-            "src":"http://st3.depositphotos.com/11233746/17636/i/450/depositphotos_176363992-stock-photo-cropped-image-hairdresser-trimming-ends.jpg,%20//st3.depositphotos.com/11233746/17636/i/600/depositphotos_176363992-stock-photo-cropped-image-hairdresser-trimming-ends.jpg%202x",
-            "bio":"This is also a bio",
+            "name":"Dee Sanguyo",
+            "bio":"Barber & Stylist\nSpecializing in detailed haircuts and styles.",
             "contacts":[
-                "Facebook","twitter","instagram"
+              {"name":"Facebook", "src":"", "key":1},
+              {"name":"Instagram", "src":"https://www.instagram.com/dee.sanguyo/", "key":2},
+              {"name":"Twitter", "src":"", "key":3},
+              {"name":"LinkedIn", "src":"", "key":4},
+              {"name":"Email", "src":"", "key":5},
+              {"name":"Phone", "src":"", "key":6},
+              {"name":"Book Online", "src":"https://getsqr.co/dee-sanguyo", "key":7}
+            ],
+            "media":[
+              {
+                "tag":"img",
+                "src":"Dee Sanguyo.jpg",
+                "alt":"Dee Sanguyo",
+                "key":1
+              }
             ]
         },
         {
             "key":3,
-            "name":"Name 3",
-            "title":"Position Title",
-            "subtitle":"sub title",
-            "src":"http://st3.depositphotos.com/12039412/16353/i/450/depositphotos_163531580-stock-photo-hairdresser.jpg",
-            "bio":"This too is a bio",
+            "name":"Jed Dulin",
+            "bio":"",
             "contacts":[
-                "Facebook","email","instagram"
+              {"name":"Facebook", "src":"", "key":1},
+              {"name":"Instagram", "src":"", "key":2},
+              {"name":"Twitter", "src":"", "key":3},
+              {"name":"LinkedIn", "src":"", "key":4},
+              {"name":"Email", "src":"", "key":5},
+              {"name":"Phone", "src":"", "key":6},
+              {"name":"Book Online", "src":"", "key":7}
+            ],
+            "media":[
+              {
+                "tag":"video",
+                "src":"Jed Dulin.mp4",
+                "alt":"Jed Dulin",
+                "key":1
+              }
             ]
-        }
+        },
+        {
+          "key":4,
+          "name":"Maurice St. Rose",
+          "bio":"Maurice has been cutting hair for 14 years, started taking barbering seriously 8 years ago. After winning 9 awards across canada he found his passion for teaching and has started a series of classes to help others expand their versatility. Maurice is best known for clean lines and smokey blends. His detailed work is recognized amongst his peers along with his versatility. ",
+          "contacts":[
+            {"name":"Facebook", "src":"", "key":1},
+            {"name":"Instagram", "src":"https://www.instagram.com/mocutz/", "key":2},
+            {"name":"Twitter", "src":"", "key":3},
+            {"name":"LinkedIn", "src":"", "key":4},
+            {"name":"Email", "src":"", "key":5},
+            {"name":"Phone", "src":"", "key":6},
+            {"name":"Book Online", "src":"https://www mocutz.com", "key":7}
+          ],
+          "media":[
+            {
+              "tag":"img",
+              "src":"Maurice St. Rose.jpg",
+              "alt":"Maurice St. Rose",
+              "key":1
+            }
+          ]
+      }
 ]
 

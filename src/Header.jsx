@@ -31,9 +31,9 @@ function Header(){
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown" className="nav-item dropdown" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                             <NavDropdown.Item className="dropdown-item"><Link to="/services">Services</Link></NavDropdown.Item>
                             <NavDropdown.Item className="dropdown-item"><Link to="/team">Our Team</Link></NavDropdown.Item>
-                            <NavDropdown.Item className="dropdown-item">Link</NavDropdown.Item>
+                            <NavDropdown.Item className="dropdown-item"><Link to="/gallery">Gallery</Link></NavDropdown.Item>
                             <NavDropdown.Divider className="dropdown-divider" />
-                            <NavDropdown.Item className="dropdown-item">Separated link</NavDropdown.Item>
+                            <NavDropdown.Item className="dropdown-item"><Link to="/partners">Our Partners</Link></NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link className="nav-item"><Link to="/contact" className="nav-link">Contact</Link></Nav.Link>
                     </Nav>
@@ -55,6 +55,12 @@ function Header(){
                     </Route>
                     <Route path="/team">
                         <Team />
+                    </Route>
+                    <Route path="/gallery">
+                        <Gallery />
+                    </Route>
+                    <Route path="/partners">
+                        <Partners />
                     </Route>
                     <Route path="/">
                         <Home />

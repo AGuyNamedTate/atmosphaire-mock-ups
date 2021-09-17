@@ -1,6 +1,34 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
+import json from './Resources/JSON/TeamBios.json';
 import banner from "./Resources/Images/contactbanner.jpg";
+
+function StylistRow({data}){
+  return (
+    <Row>
+      <Col xs={4} md={4}>
+        {data.name}
+      </Col>
+      {data.contacts.map((contact)=>{
+        if(contact.name=== "Phone"){
+          return(
+            <Col xs={4} md={4} key={contact.key}>
+              <a href={`tel:${contact.src}`}>{contact.src}</a>
+            </Col>
+          );
+        }else if(contact.name==="Book Online"){
+          return(
+            <Col xs={4} md={4} key={contact.key}>
+              <a href={`${contact.src}`}>{contact.src}</a>
+            </Col>
+          );
+        }
+        return null;
+      })}
+    </Row>
+
+  );
+}
 
 function Contact(){
     return (
@@ -9,10 +37,6 @@ function Contact(){
                 <h1 className="display-4">Contact</h1>
                 <p className="lead">This is where our banner will go</p>
                 <hr className="my-4" />
-                <p>This is a seperate section</p>
-                <p className="lead">
-                    <a className="btn btn-primary btn-lg" href="#Contact" role="button">This is a link</a>
-                </p>
             </div>
             <div>
               <Row style={{maxWidth:"100%"}}>
@@ -26,56 +50,12 @@ function Contact(){
                     please refer to the table below</p>
                   </Row>
                   <Row>
-                      <Col><strong>Stylist</strong></Col>
-                      <Col><strong>Booking</strong></Col>
+                      <Col sm={4}><strong>Stylist</strong></Col>
+                      <Col sm={8}><strong>Booking</strong></Col>
                   </Row>
-                  <Row>
-                      <Col>Lisa Cantwell</Col>
-                      <Col>250-381-HAIR (4247)</Col>
-                  </Row>
-                  <Row>
-                      <Col>Ryanne</Col>
-                      <Col>250-381-HAIR (4247)</Col>
-                  </Row>
-                  <Row>
-                      <Col>Dee Sanguyo</Col>
-                      <Col><a href="https://Demanded.ca">Demanded.ca</a></Col>
-                  </Row>
-                  <Row>
-                      <Col>Maurice St. Rose</Col>
-                      <Col><a href="https://mocutz.com/">mocutz.com</a></Col>
-                  </Row>
-                  <Row>
-                      <Col>Jed Dulin</Col>
-                      <Col><a href="https://vagaro.com/dyepretty">vagaro.com</a></Col>
-                  </Row>
-                  <Row>
-                      <Col xs={6}>Jennifer</Col>
-                      <Col>
-                      <Row>
-                          <Col xs={6}>250-516-4479</Col>
-                          <Col xs={6}><a href="https://www.instagram.com/jennifernicolehairartistry/">@jennifernicolehairartistry</a></Col>
-                      </Row>
-                      </Col>
-                  </Row>
-                  <Row>
-                      <Col>Brae Carnes</Col>
-                      <Col>
-                      <Row>
-                          <Col>250-888-2053</Col>
-                          <Col><a href="https://www.instagram.com/BraeCarnes/">@BraeCarnes</a></Col>
-                      </Row>
-                      </Col>
-                  </Row>
-                  <Row>
-                      <Col>Sophie Baines</Col>
-                      <Col>
-                          <Row>
-                              <Col><a href="mailto:soph.hairartist@gmail.com">Email</a></Col>
-                              <Col><a href="https://instagram.com/sophisticated.hair.artist">@sophisticated.hair.artist</a></Col>
-                          </Row>
-                      </Col>
-                  </Row>
+                  {json.map((data)=>{
+                    return(<StylistRow key={data.key.toString()} data={data}/>);
+                  })}
               </Col>
             <Col>
                 <Row>

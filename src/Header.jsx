@@ -11,6 +11,8 @@ import Home from './Home';
 import About from './About';
 import Contact from './Contact';
 import Services from './Services';
+import Gallery from './Gallery';
+import Partners from './Partners';
 import Team from './Team';
 
 import brandLogo from './Resources/Images/atmosphaire-logo.png';

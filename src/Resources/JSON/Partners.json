@@ -1,0 +1,26 @@
+[
+  {
+    "name": "ABC",
+    "src":"ABC-0.png",
+    "description":"Authentic Beauty Concept is a holistic premium brand co-created with a unique hairdresser collective to start a new path to authentic beauty.",
+    "link":"https://www.authenticbeautyconcept.us/en/home.html"
+  },
+  {
+    "name": "Hotheads",
+    "src":"Hotheads.png",
+    "description":"Hotheads® Hair Extensions are human hair, adhesive weft extensions that are applied without the need for tools or heat.",
+    "link":"https://www.hotheads.com"
+  },
+  {
+    "name": "LOMA",
+    "src":"LOMA.jpg",
+    "description":"LOMA is a collection of organically infused, aromatic products for daily comfort. Naturally healing, organic ingredients partnered with environmentally-conscious manufacturing give you exceptional performance.",
+    "link":"https://lomabeauty.us"
+  },
+  {
+    "name": "RefectoCil",
+    "src":"RefectoCil.png",
+    "description":"Tailor-made brow & lash styling perfects every look. Shape & colour last up to 6 weeks. Naturally smudge- and waterproof.",
+    "link":"https://refectocil.at/int/"
+  }
+]

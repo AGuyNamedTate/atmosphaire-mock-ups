@@ -7,12 +7,7 @@ function About(){
         <div className="About" >
             <div className="jumbotron" style={{backgroundImage:`url(${banner})`, backgroundPosition: "center",backgroundRepeat: "no-repeat",backgroundSize: "cover", color:"white"}}>
                 <h1 className="display-4" style={{fontSize: "3em", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"}}>About Us</h1>
-                <p className="lead">This is where our banner will go</p>
                 <hr className="my-4" />
-                <p>This is a seperate section</p>
-                <p className="lead">
-                    <a className="btn btn-primary btn-lg" href="#About" role="button">This is a link</a>
-                </p>
             </div>
             <Row style={{width: "100%"}}>
               <div className="card border-primary mb-3 mx-5" style={{maxWidth: "50rem"}}>

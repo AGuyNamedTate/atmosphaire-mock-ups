@@ -34,7 +34,7 @@ function Bio({data}){
                       if(contact.src ===""){
                         return null;
                       }
-                      return(<Col key={contact.key}><span className="badge rounded-pill bg-primary"><a href={contact.src} className="card-link" style={{color:"white"}}>{contact.Name}</a></span></Col>)
+                      return(<Col key={contact.key}><span className="badge rounded-pill bg-primary"><a href={contact.src} className="card-link" style={{color:"white"}}>{contact.name}</a></span></Col>)
                     })} 
                 </Row>
               {/* <div className="card-footer text-muted">

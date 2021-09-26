@@ -1,4 +1,6 @@
 import React from 'react';
+
+import {Image} from 'react-bootstrap';
 import banner from './Resources/Images/servicesbanner.jpg'
 import partners from './Resources/JSON/Partners.json'
 
@@ -20,11 +22,10 @@ function Partners(){
       <div>
         {
           partners.map((partner, index) => {
-            
             return (
-              <div className="card mb-3" style={{display:"inline-block", maxWidth:"50rem", minHeight:"30rem", maxHeight:"40rem"}}>
+              <div className="card mb-3" style={{display:"inline-block", maxWidth:"50%", justifyContent: "center"}}>
                 <h3 className="card-header">{partner.name}</h3>
-                <img src={images[partner.src].default} className="d-block user-select-none" alt={partner.name} style={{maxWidth:"30rem"}} />
+                <Image src={images[partner.src].default} className="d-block user-select-none" alt={partner.name} fluid style={{marginLeft:"auto", height:"20rem", marginRight:"auto" }}/>
                 <div className="card-body">
                   <p className="card-text">{partner.description}</p>
                 </div>

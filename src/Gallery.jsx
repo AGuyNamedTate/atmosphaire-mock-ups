@@ -12,13 +12,15 @@ const images = importAll(require.context('./Resources/Images/Gallery', false, /\
 
 
 function Gallery(){
-  console.log(images);
   return(
     <div>
       <div className="jumbotron" style={{backgroundImage:`url(${banner})`, backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
         <h1 className="display-4">Gallery</h1>
 
         <hr className="my-4" />
+      </div>
+      <div class="jumbotron">
+        <p class="lead">Thanks for coming to take a look at some of the work out stylists have done. Click through the the gallery below to see pictures of what we can do for you.</p>
       </div>
       <div className="container">
       <Carousel  style={{maxHeight:"70rem"}}>

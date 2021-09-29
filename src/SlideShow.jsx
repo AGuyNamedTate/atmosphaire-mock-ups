@@ -8,7 +8,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-import Carousel_1 from './Resources/Images/Carousel-1.jpg';
+import Carousel_1 from './Resources/Images/Promos/Carousel-1.jpg';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 

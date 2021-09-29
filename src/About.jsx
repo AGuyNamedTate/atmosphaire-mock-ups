@@ -13,7 +13,7 @@ function About(){
               <div className="card border-primary mb-3 mx-5" style={{maxWidth: "50rem"}}>
                 <div className="card-body">
                   <h4 className="card-title">Who Are We?</h4>
-                  <p className="card-text" style={{fontSize:"22px"}}>atmospHAIRe is a fashion-forward, fun salon—featuring a fabulous group of elite stylists who can satisfy every lock and strand of your hair-related desires. Whatever your age and gender, atmospHAIRe stylists will listen to you, offer cutting-edge advice when requested, and always pamper you with the best haircare products on the market. The floor-to-ceiling windows also create a unique atmosphere, allowing natural light to flood into this standout salon—which is conveniently located in the Selkirk Waterfront development.</p>
+                  <p className="card-text" style={{fontSize:"22px"}}>AtmospHAIRe is a fashion-forward salon — featuring a fabulous group of elite stylists who can satisfy every lock and strand of your hair-related desires. Whatever your age and gender, atmospHAIRe stylists will listen to you, offer cutting-edge advice when requested, and always pamper you with the best haircare products on the market. The floor-to-ceiling windows also create a unique atmosphere, allowing natural light to flood into this standout salon—which is conveniently located in the Selkirk Waterfront development.</p>
                 </div>
               </div>
               <div className="card border-primary mb-3 mx-5" style={{maxWidth: "50rem"}}>

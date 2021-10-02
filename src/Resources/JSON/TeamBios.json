@@ -1,6 +1,50 @@
 [
+  {
+    "key":1,
+    "name":"Lisa Cantwell",
+    "bio":"Lisa has been perfecting her craft for 38 years. As the owner of AtmospHAIRe she strives to set a great example of skilled a professional with a strong work ethic. When Lisa isn’t behind the chair, you can find her running the trails or climbing mountains.",
+    "contacts":[
+      {"name":"Facebook", "src":"", "key":1},
+      {"name":"Instagram", "src":"", "key":2},
+      {"name":"Twitter", "src":"", "key":3},
+      {"name":"LinkedIn", "src":"", "key":4},
+      {"name":"Email", "src":"", "key":5},
+      {"name":"Phone", "src":"", "key":6},
+      {"name":"Book Online", "src":"", "key":7}
+    ],
+    "media":[
+      {
+        "tag":"img",
+        "src":"Lisa Cantwell.jpg",
+        "alt":"Lisa Cantwell",
+        "key":1
+      }
+    ]
+  },
+  {
+    "key":2,
+    "name":"Ryanne Cyr",
+    "bio":"Ryanne has being doing hair for 14 years. She has enjoyed many advanced training courses and has an eye for detail. Ryanne takes pride in getting to know her clients on a deeper level and considers them part of her family. She enjoys styling wedding hair, creating looks with multi colors, and especially enjoys all the different shades of blonde. When Ryanne isn’t in the salon you can find her spending time with her family, fishing, and exploring the outdoors with her 2 boys.",
+    "contacts":[
+      {"name":"Facebook", "src":"", "key":1},
+      {"name":"Instagram", "src":"", "key":2},
+      {"name":"Twitter", "src":"", "key":3},
+      {"name":"LinkedIn", "src":"", "key":4},
+      {"name":"Email", "src":"", "key":5},
+      {"name":"Phone", "src":"", "key":6},
+      {"name":"Book Online", "src":"", "key":7}
+    ],
+    "media":[
+      {
+        "tag":"img",
+        "src":"Ryanne Cyr.jpg",
+        "alt":"Ryanne Cyr",
+        "key":1
+      }
+    ]
+  },
         {
-            "key":1,
+            "key":3,
             "name":"Brae Carnes",
             "bio":"Brae Carnes is a master stylist trained at the Aveda Institute of Victoria. She received a comprehensive and rigorous education which she utilizes in salon today. Priding herself in her multi-faceted approach to hair, she specializes in everything from short fades, colour, blondes, extensions, and cuts. With a love of all things fashion and experience working as a model she is always on the forefront of new trends and taking inspiration from runway shows and pop culture. Inclusivity is extremely important to both Brae and her business, using gender neutral pricing and bookings. As a Trans rights activist and educator her chair as a safe space for anyone in the LGBTQ2S+ community, offering affirming services and an in depth knowledge of the queer experience. For neurodiverse clients and those wanting privacy she is also available for Sunday bookings when the salon is emptier and quiet.",
             "contacts":[
@@ -22,7 +66,7 @@
             ]
         },
         {
-            "key":2,
+            "key":4,
             "name":"Dee Sanguyo",
             "bio":"Barber & Stylist\nSpecializing in detailed haircuts and styles.",
             "contacts":[
@@ -44,7 +88,7 @@
             ]
         },
         {
-            "key":3,
+            "key":5,
             "name":"Jed Dulin",
             "bio":"",
             "contacts":[
@@ -66,7 +110,7 @@
             ]
         },
         {
-          "key":4,
+          "key":6,
           "name":"Maurice St. Rose",
           "bio":"Maurice has been cutting hair for 14 years, started taking barbering seriously 8 years ago. After winning 9 awards across canada he found his passion for teaching and has started a series of classes to help others expand their versatility. Maurice is best known for clean lines and smokey blends. His detailed work is recognized amongst his peers along with his versatility. ",
           "contacts":[
@@ -88,7 +132,7 @@
           ]
       },
       {
-        "key":5,
+        "key":7,
         "name":"Sophie Baines",
         "bio":"Sophie graduated at the top of her class with a Cosmetology diploma from the Aveda Institute Victoria in 2016, and founded Sophisticated Hair Artist in 2020. This entrepreneur is passionate about all aspects of her business; her interests include all things hair, design and business related. Sophie is currently furthering her knowledge in these areas of interest by pursuing a double major degree program in Business and Design in her homeland, Australia. This ambitious individual juggles it all and believes in quality over quantity when it comes to her work behind the chair. By forming long lasting relationships with her clients, Sophie builds trust by taking the time to design a look that best combines the clients needs and desires. This sophisticated hair artist has talents in cutting, colouring and styling - specializing in creating natural, lived-in hair. With Sophie's focus on detail, hair maintenance and overall hair health, your hair will look and feel amazing from the moment you walk out of the salon to the moment you walk back in. Check out her Instagram @sophisticated.hair.artist for up to date information and hair inspiration.",
         "contacts":[

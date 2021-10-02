@@ -2,7 +2,21 @@ import React from 'react';
 import json from './Resources/JSON/TeamBios.json';
 import {Row, Col} from 'react-bootstrap';
 import banner from './Resources/Images/teambanner.jpg';
-import CustomCarousel from './Carousel';
+import { Carousel } from 'react-responsive-carousel';
+
+
+function CustomCarousel({portfolio}){
+  return(
+      <Carousel style={{height: '100%'}} showThumbs={false} showIndicators={false} >
+        {
+          portfolio.map((media) =>
+            <div key={media.key} style={{marginLeft:"auto", marginRight:"auto"}}>
+              <media.tag src={process.env.PUBLIC_URL+`/TeamPictures/${media.src}`} alt={media.alt} style={{width:"60%", size:'cover'}} controls/>
+            </div>
+        )}
+      </Carousel>
+  );
+}
 
 function Bio({data}){
   var leftRight = data.key % 2 ===0;
@@ -13,16 +27,16 @@ function Bio({data}){
               <h3 className="card-header" style={{textAlign: leftRight ? 'left' : 'right'}}>{data.name}</h3>
               {leftRight ?
                (<Row style={{maxWidth:"100%", maxHeight:"65rem"}}>
-                  <div style={{width: hasBio ? "40%" : "100%", maxHeight:"65rem"}}>
+                  <div style={{width: hasBio ? "35%" : "100%", maxHeight:"65rem"}}>
                     <CustomCarousel portfolio={data.media} />
                   </div>
-                <div className="card-body" style={{width: hasBio ? "55%" : "0px", maxHeight:"65rem", textAlign:"left", fontSize: "22px"}}>
+                <div className="card-body" style={{width: hasBio ? "55%" : "0px", maxHeight:"65rem", textAlign:"left", fontSize: "2rem"}}>
                     <p className="card-text bio">{data.bio}</p>
                 </div>
               </Row>) 
                :
                 (<Row style={{maxWidth:"100%", maxHeight:"65rem"}}>
-                  <div className="card-body" style={{width: hasBio ? "55%" : "0px", maxHeight:"65rem", textAlign:"left", fontSize: "22px"}}>
+                  <div className="card-body" style={{width: hasBio ? "55%" : "0px", maxHeight:"65rem", textAlign:"left", fontSize: "1.8rem"}}>
                       <p className="card-text bio">{data.bio}</p>
                   </div>
                   <div style={{width: hasBio ? "40%" : "100%", maxHeight:"65rem"}}>
@@ -37,9 +51,6 @@ function Bio({data}){
                       return(<Col key={contact.key}><span className="badge rounded-pill bg-primary"><a href={contact.src} className="card-link" style={{color:"white"}}>{contact.name}</a></span></Col>)
                     })} 
                 </Row>
-              {/* <div className="card-footer text-muted">
-                  Footer Text
-              </div> */}
             </div>
         </div>
     );

@@ -1,4 +1,5 @@
 import './App.css';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Header from './Header';
 import Footer from './Footer';
 
@@ -21,6 +22,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <div className="body" style={{height: '100%', marginBottom: '86.75px'}}>
         <Header />
         <Switch>
           <Route path="/about">
@@ -48,6 +50,7 @@ function App() {
             <NoMatch />
           </Route>
         </Switch>
+        </div>
         <Footer />
       </Router>
     </div>

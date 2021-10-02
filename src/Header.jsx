@@ -9,15 +9,15 @@ import brandLogo from './Resources/Images/atmosphaire-logo.png';
 function Header(){
 
     return(
-      <header >
+      <header id="top">
       <Navbar className="navbar navbar-expand-lg navbar-dark bg-primary" expand="lg" style={{padding:"10px"}}>
           <Navbar.Brand className="navbar-brand"><Link to="/"><img src={brandLogo} alt="AtmosHaire.com" /></Link></Navbar.Brand>
           <Navbar.Toggle className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation"/>
           <Navbar.Collapse className="collapse navbar-collapse" id="basic-navbar-nav">
           <Nav className="navbar-nav me-auto">
-              <Nav.Link className="nav-item"><Link to="/" className="nav-link active">Home</Link></Nav.Link>
+              <Nav.Link className="nav-item"><Link to="/" className="nav-link">Home</Link></Nav.Link>
               <Nav.Link className="nav-item"><Link to="/about" className="nav-link">About</Link></Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown" className="nav-item dropdown" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              <NavDropdown title="More" id="basic-nav-dropdown" className="nav-item dropdown nav-link" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                   <NavDropdown.Item className="dropdown-item"><Link to="/services">Services</Link></NavDropdown.Item>
                   <NavDropdown.Item className="dropdown-item"><Link to="/team">Our Team</Link></NavDropdown.Item>
                   <NavDropdown.Item className="dropdown-item"><Link to="/gallery">Gallery</Link></NavDropdown.Item>

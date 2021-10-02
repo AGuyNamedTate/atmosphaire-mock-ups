@@ -1,0 +1,22 @@
+[
+  {"key":1, "name": "Clipper/Barber cut", "price":0},
+  {"key":2, "name": "Hair tattoo/design", "price":0},
+  {"key":3, "name": "Beard trim", "price":0},
+  {"key":4, "name": "Straight Shaves", "price":0},
+  {"key":5, "name": "Long hair/ stylized cut", "price":0},
+  {"key":6, "name": "Bang trim", "price":0},
+  {"key":7, "name": "Shampoo and style", "price":0},
+  {"key":8, "name": "Updo", "price":0},
+  {"key":9, "name": "Root touch up", "price":0},
+  {"key":10, "name": "All over colour", "price":0},
+  {"key":11, "name": "Colour correction", "price":0},
+  {"key":12, "name": "Bleach and tone", "price":0},
+  {"key":13, "name": "Full highlights", "price":0},
+  {"key":14, "name": "Partial highlights", "price":0},
+  {"key":15, "name": "Balayage", "price":0},
+  {"key":16, "name": "Toner/glossing", "price":0},
+  {"key":17, "name": "Perm", "price":0},
+  {"key":18, "name": "Relaxer", "price":0},
+  {"key":19, "name": "Keratin Smoothing Treatment", "price":0},
+  {"key":20, "name": "Hot Heads Hair extensions", "price":0}  
+]

@@ -19,9 +19,10 @@ function Footer(){
             </Navbar.Collapse>
             <div style={{display:'inline-block'}}>
               <p>108-2940 Jutland Road</p>
-              <p>Victoria, BC   &emsp;&emsp; V8T 5K6</p>
-              <p className="text-center">&copy; Copyright 2021 - All Rights Reserved</p>
+              <p>Victoria, BC   &emsp; V8T 5K6</p>
             </div>
+            <div style={{float:"right", width:"2.5%"}}>&emsp;</div>
+            <p className="text-center" style={{float:"right"}}>&copy; Copyright 2021 - All Rights Reserved</p>
         </Navbar>
     </footer>
   );

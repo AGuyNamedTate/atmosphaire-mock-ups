@@ -1,7 +1,7 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
 import json from './Resources/JSON/TeamBios.json';
-import banner from "./Resources/Images/contactbanner.jpg";
+import banner from "./Resources/Images/Salon/8.jpg";
 
 function StylistRow({data}){
   return (
@@ -10,16 +10,10 @@ function StylistRow({data}){
         {data.name}
       </Col>
       {data.contacts.map((contact)=>{
-        if(contact.name=== "Phone"){
+        if(contact.primary && contact.src !==""){
           return(
             <Col xs={4} md={4} key={contact.key}>
-              <a href={`tel:${contact.src}`}>{contact.src}</a>
-            </Col>
-          );
-        }else if(contact.name==="Book Online"){
-          return(
-            <Col xs={4} md={4} key={contact.key}>
-              <a href={`${contact.src}`}>{contact.src}</a>
+              <a href={contact.src}>{contact.name}</a>
             </Col>
           );
         }
@@ -33,9 +27,8 @@ function StylistRow({data}){
 function Contact(){
     return (
         <div className="Contact">
-            <div className="jumbotron" style={{backgroundImage:`url(${banner})`, backgroundPosition: "center",backgroundRepeat: "no-repeat",backgroundSize: "cover"}}>
-                <h1 className="display-4">Contact</h1>
-                <p className="lead">This is where our banner will go</p>
+            <div className="jumbotron" style={{backgroundImage:`url(${banner})`, backgroundPosition: "center",backgroundRepeat: "no-repeat", backgroundSize: "cover", minHeight:"7.5rem"}}>
+                <h1 className="display-4" style={{fontSize: "3em", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000", color:"white"}}>Contact</h1>
                 <hr className="my-4" />
             </div>
             <div>
@@ -56,6 +49,8 @@ function Contact(){
                   {json.map((data)=>{
                     return(<StylistRow key={data.key.toString()} data={data}/>);
                   })}
+                  <br/>
+                  <p>Check us out on <a href="https://www.facebook.com/atmospHAIRe">Facebook</a></p>
               </Col>
             <Col>
                 <Row>

@@ -1,8 +1,8 @@
 import React from 'react';
 
 import {Image} from 'react-bootstrap';
-import banner from './Resources/Images/servicesbanner.jpg'
-import partners from './Resources/JSON/Partners.json'
+import banner from './Resources/Images/Salon/4.jpg';
+import partners from './Resources/JSON/Partners.json';
 
 function importAll(r) {
   let images = {};
@@ -15,8 +15,8 @@ const images = importAll(require.context('./Resources/Images/Logos', false, /\.(
 function Partners(){
   return(
   <div>
-     <div className="jumbotron" style={{backgroundImage:`url(${banner})`, backgroundPosition: "center",backgroundRepeat: "no-repeat",backgroundSize: "cover"}}>
-        <h1 className="display-4">Partners</h1>
+     <div className="jumbotron" style={{backgroundImage:`url(${banner})`, backgroundPosition: "center",backgroundRepeat: "no-repeat",backgroundSize: "cover", minHeight:"7.5rem"}}>
+        <h1 className="display-4" style={{fontSize: "3em", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000", color:"white"}}>Partners</h1>
         <hr className="my-4" />
       </div>
       <div>

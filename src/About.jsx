@@ -1,12 +1,12 @@
 import React from 'react';
 import { Row } from 'react-bootstrap';
-import banner from './Resources/Images/aboutbanner.jpg'
+import banner from './Resources/Images/Salon/2.jpg'
 
 function About(){
     return (
         <div className="About" >
-            <div className="jumbotron" style={{backgroundImage:`url(${banner})`, backgroundPosition: "center",backgroundRepeat: "no-repeat",backgroundSize: "cover", color:"white"}}>
-                <h1 className="display-4" style={{fontSize: "3em", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"}}>About Us</h1>
+            <div className="jumbotron" style={{backgroundImage:`url(${banner})`, backgroundPosition: "center",backgroundRepeat: "no-repeat",backgroundSize: "cover", minHeight:"7.5rem"}}>
+                <h1 className="display-4" style={{fontSize: "3em", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000", color:"white"}}>About Us</h1>
                 <hr className="my-4" />
             </div>
             <Row style={{width: "100%"}}>

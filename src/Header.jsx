@@ -27,10 +27,10 @@ function Header(){
               <Nav.Link className="nav-item"><Link to="/contact" className="nav-link">Contact</Link></Nav.Link>
           </Nav>
           </Navbar.Collapse>
-          <form className="d-flex">
+          {/* <form className="d-flex">
                   <input className="form-control me-sm-2" type="text" placeholder="Search" />
                   <button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-          </form>
+          </form> */}
       </Navbar>
     </header>
     )

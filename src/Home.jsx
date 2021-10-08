@@ -31,10 +31,10 @@ function PromoPreview(){
 function Home(){
     return(
         <div className="Home">
-            <div className="jumbotron">
-                <h1 className="display-4">Home</h1>
+            {/* <div className="jumbotron">
+                <h1 className="display-4" style={{fontSize: "3em", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000", color:"white"}}>Home</h1>
                 <hr className="my-4" />
-            </div>
+            </div> */}
             <PromoPreview />
             <div style={{marginTop:"1rem"}}>
                 <Row style={{maxWidth:'100%'}}>

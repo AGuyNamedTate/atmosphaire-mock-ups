@@ -1,12 +1,12 @@
 import React from 'react';
-import banner from './Resources/Images/servicesbanner.jpg';
+import banner from './Resources/Images/Salon/5.jpg';
 import services from './Resources/JSON/Services.json';
 
 function Services(){
     return(
         <div className="Services">
-           <div className="jumbotron" style={{backgroundImage:`url(${banner})`, backgroundPosition: "center",backgroundRepeat: "no-repeat",backgroundSize: "cover"}}>
-                <h1 className="display-4" >Services</h1>
+           <div className="jumbotron" style={{backgroundImage:`url(${banner})`, backgroundPosition: "center",backgroundRepeat: "no-repeat",backgroundSize: "cover", minHeight:"7.5rem"}}>
+                <h1 className="display-4" style={{fontSize: "3em", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000", color:"white"}}>Services</h1>
                 <hr className="my-4" />
             </div>
             <div className="container">

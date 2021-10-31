@@ -10,6 +10,11 @@ function Services(){
                 <hr className="my-4" />
             </div>
             <div className="container">
+            <div class="card border-light mb-3">
+              <div class="card-body">
+                <p class="card-text">Below is a list of services our stylists provide. Please inquire with individual stylists for estimates.</p>
+              </div>
+            </div>
               <table className="table table-hover">
                 <thead>
                   <tr>

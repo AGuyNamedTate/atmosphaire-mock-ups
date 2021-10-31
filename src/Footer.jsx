@@ -14,7 +14,7 @@ function Footer(){
                 <Nav.Link className="nav-item"><Link to="/" className="nav-link active">Home</Link></Nav.Link>
                 <Nav.Link className="nav-item"><Link to="/about" className="nav-link">About</Link></Nav.Link>
                 <Nav.Link className="nav-item"><Link to="/contact" className="nav-link">Contact</Link></Nav.Link>
-                <Nav.Link role="button" className="nav-item" tabIndex="0" href="#top" ><a className="nav-link" href="#top" >Top</a></Nav.Link>
+                <Nav.Link role="button" className="nav-item" tabIndex="0" href="#top" ><a className="nav-link" href="#top" >Top ↑</a></Nav.Link>
             </Nav>
             </Navbar.Collapse>
             <div style={{display:'inline-block'}}>

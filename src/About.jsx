@@ -9,7 +9,7 @@ function About(){
                 <h1 className="display-4" style={{fontSize: "3em", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000", color:"white"}}>About Us</h1>
                 <hr className="my-4" />
             </div>
-            <Row style={{width: "100%"}}>
+            <Row style={{width: "100%", marginTop: "10px"}}>
               <div className="card border-primary mb-3 mx-5" style={{maxWidth: "50rem"}}>
                 <div className="card-body">
                   <h4 className="card-title">Who Are We?</h4>

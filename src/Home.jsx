@@ -14,13 +14,13 @@ const images = importAll(require.context('./Resources/Images/Promos', false, /\.
 function PromoPreview(){
 
     return(
-        <div>
-            <Carousel autoplay={true} showThumbs={false} infiniteLoop={true}>
+        <div style={{maxHeight:"500px"}}>
+            <Carousel autoplay={true} showThumbs={false} infiniteLoop={true} style={{maxHeight:"500px"}}>
                 {
                 Object.keys(images).map((key, index)=>{
             
                 return(
-                    <div key={index} style={{marginLeft:"auto", marginRight:"auto"}}>
+                    <div key={index} style={{marginLeft:"auto", marginRight:"auto",maxHeight:"500px"}} >
                         <img src={images[key].default} alt={key} style={{width:"100%", height:"auto", maxHeight:"68rem", maxWidth:"70rem"}} />
                     </div>)})}
             </Carousel>

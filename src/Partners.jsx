@@ -23,7 +23,7 @@ function Partners(){
         {
           partners.map((partner, index) => {
             return (
-              <div className="card mb-3" style={{display:"inline-block", maxWidth:"50%", justifyContent: "center"}}>
+              <div key={index} className="card mb-3" style={{display:"inline-block", maxWidth:"50%", justifyContent: "center", height:"550px", marginBottom:"0"}}>
                 <h3 className="card-header">{partner.name}</h3>
                 <Image src={images[partner.src].default} className="d-block user-select-none" alt={partner.name} fluid style={{marginLeft:"auto", height:"20rem", marginRight:"auto" }}/>
                 <div className="card-body">

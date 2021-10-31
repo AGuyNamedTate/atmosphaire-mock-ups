@@ -31,7 +31,7 @@
       {"name":"Twitter", "src":"", "key":3},
       {"name":"LinkedIn", "src":"", "key":4},
       {"name":"Email", "src":"", "key":5},
-      {"name":"Phone", "src":"tel:250-381-4247", "key":6, "primary":true},
+      {"name":"Phone", "src":"tel:250-686-0424", "key":6, "primary":true},
       {"name":"Book Online", "src":"", "key":7}
     ],
     "media":[
@@ -152,6 +152,28 @@
             "key":1
           }
         ]
-    }
+    },
+    {
+      "key":8,
+      "name":"Erinn Kennedy",
+      "bio":"A certified beauty expert, with over 6 years of experience doing hair! Loves to do anything blonde and especially bleach outs!",
+      "contacts":[
+        {"name":"Facebook", "src":"", "key":1},
+        {"name":"Instagram", "src":"https://www.instagram.com/erinn_kennedy/", "key":2, "primary":true},
+        {"name":"Twitter", "src":"", "key":3},
+        {"name":"LinkedIn", "src":"", "key":4},
+        {"name":"Email", "src":"", "key":5},
+        {"name":"Phone", "src":"sms:250-858-1149", "key":6, "primary":true},
+        {"name":"Book Online", "src":"", "key":7}
+      ],
+      "media":[
+        {
+          "tag":"img",
+          "src":"Erinn Kennedy.jpg",
+          "alt":"Erinn Kennedy",
+          "key":1
+        }
+      ]
+  }
 ]
 

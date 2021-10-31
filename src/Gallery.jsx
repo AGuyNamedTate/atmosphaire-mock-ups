@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from './Resources/Images/Salon/9.jpg';
+import banner from './Resources/Images/Salon/12.jpg';
 import { Carousel } from 'react-responsive-carousel';
 
 function importAll(r) {

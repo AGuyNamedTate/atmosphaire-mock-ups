@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from './Resources/Images/Salon/5.jpg';
+import banner from './Resources/Images/Salon/11.jpg';
 import services from './Resources/JSON/Services.json';
 
 function Services(){

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Container, Navbar, Nav } from 'react-bootstrap';
 import {
     Link
   } from "react-router-dom";
@@ -17,11 +17,11 @@ function Footer(){
                 <Nav.Link role="button" className="nav-item" tabIndex="0" href="#top" ><a className="nav-link" href="#top" >Top ↑</a></Nav.Link>
             </Nav>
             </Navbar.Collapse>
-            <div style={{display:'inline-block'}}>
+            <Container fluid style={{display:'inline-block'}}>
               <p>108-2940 Jutland Road</p>
               <p>Victoria, BC   &emsp; V8T 5K6</p>
-            </div>
-            <div style={{float:"right", width:"2.5%"}}>&emsp;</div>
+            </Container>
+            <Container fluid style={{float:"right", width:"2.5%"}}>&emsp;</Container>
             <p className="text-center" style={{float:"right"}}>&copy; Copyright 2021 - All Rights Reserved</p>
         </Navbar>
     </footer>

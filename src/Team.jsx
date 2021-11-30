@@ -1,6 +1,7 @@
 import React from 'react';
 import json from './Resources/JSON/TeamBios.json';
-import {Row, Col} from 'react-bootstrap';
+import  {Container, Row, Col} from 'react-bootstrap';
+import Stack from 'react-bootstrap/Stack';
 import banner from './Resources/Images/Salon/10.jpg';
 import { Carousel } from 'react-responsive-carousel';
 
@@ -10,9 +11,9 @@ function CustomCarousel({portfolio}){
       <Carousel style={{height: '100%'}} showThumbs={false} showIndicators={false} >
         {
           portfolio.map((media) =>
-            <div key={media.key} style={{marginLeft:"auto", marginRight:"auto"}}>
+            <Container fluid key={media.key} style={{marginLeft:"auto", marginRight:"auto"}}>
               <media.tag src={process.env.PUBLIC_URL+`/TeamPictures/${media.src}`} alt={media.alt} style={{width:"60%", size:'cover'}} controls/>
-            </div>
+            </Container>
         )}
       </Carousel>
   );
@@ -21,27 +22,28 @@ function CustomCarousel({portfolio}){
 function Bio({data}){
   var leftRight = data.key % 2 ===0;
   var hasBio = data.bio !=="";
+  var displayMedia = !(window.innerWidth < 700 && data.media[0].tag === "img")
     return (
-        <div className={data.name} style={{maxHeight:70+"rem"}}>
-            <div className="card" style={{maxHeight:"100%"}}>
+        <Container fluid className={data.name}>
+            <Container fluid className="card" style={{maxHeight:"100%"}}>
               <h3 className="card-header" style={{textAlign: leftRight ? 'left' : 'right'}}>{data.name}</h3>
               {leftRight ?
-               (<Row style={{maxWidth:"100%", maxHeight:"65rem"}}>
-                  <div style={{width: hasBio ? "35%" : "100%", maxHeight:"65rem"}}>
+               (<Row style={{maxWidth:"100%", }}>
+                 {displayMedia &&<Container fluid style={{width: hasBio ? "35%" : "100%" }}>
                     <CustomCarousel portfolio={data.media} />
-                  </div>
-                <div className="card-body" style={{width: hasBio ? "55%" : "0px", maxHeight:"65rem", textAlign:"left", fontSize: "2rem"}}>
+                  </Container>}
+                <Container fluid className="card-body" style={{width: hasBio ? "55%" : "0px", textAlign:"left", fontSize: "1.5em"}}>
                     <p className="card-text bio">{data.bio}</p>
-                </div>
+                </Container>
               </Row>) 
                :
-                (<Row style={{maxWidth:"100%", maxHeight:"65rem"}}>
-                  <div className="card-body" style={{width: hasBio ? "55%" : "0px", maxHeight:"65rem", textAlign:"left", fontSize: "1.8rem"}}>
+                (<Row style={{maxWidth:"100%",}}>
+                  <Container fluid className="card-body" style={{width: hasBio ? "55%" : "0px", textAlign:"left", fontSize: "1.5em"}}>
                       <p className="card-text bio">{data.bio}</p>
-                  </div>
-                  <div style={{width: hasBio ? "40%" : "100%", maxHeight:"65rem"}}>
+                  </Container>
+                  {displayMedia && <Container fluid style={{width: hasBio ? "40%" : "100%"}}>
                     <CustomCarousel portfolio={data.media} />
-                  </div>
+                  </Container>}
                 </Row>)}
                 <Row style={{maxWidth:"100%", maxHeight:"100%", width:"60%", marginLeft: (leftRight ? "auto" :"3%"), marginRight: (leftRight ? "3%" :"auto")}}>
                     {data.contacts.map((contact) =>{
@@ -51,21 +53,23 @@ function Bio({data}){
                       return(<Col key={contact.key}><span className="badge rounded-pill bg-primary"><a href={contact.src} className="card-link" style={{color:"white"}}>{contact.name}</a></span></Col>)
                     })} 
                 </Row>
-            </div>
-        </div>
+            </Container>
+        </Container>
     );
 }
 
 function Team(){
     return(
-        <div className="Team">
-            <div className="jumbotron" style={{height:"10%", backgroundImage:`url(${banner})`, backgroundPosition: "center", backgroundRepeat: "no-repeat",backgroundSize: "cover", minHeight:"7.5rem"}}>
+        <Container fluid className="Team">
+            <Container fluid className="jumbotron" style={{height:"10%", backgroundImage:`url(${banner})`, backgroundPosition: "center", backgroundRepeat: "no-repeat",backgroundSize: "cover", minHeight:"7.5rem"}}>
                 <h1 className="display-4" style={{fontSize: "3em", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000", color:"white"}}>Our Team</h1>
-            </div>
+            </Container>
+            <Stack gap={2}>
             {json.map((data)=>{
                return(<Bio key={data.key} data={data} />);
             })}
-        </div>
+            </Stack>
+        </Container>
     );
 }
 export default Team;

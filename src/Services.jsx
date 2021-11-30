@@ -1,20 +1,21 @@
 import React from 'react';
 import banner from './Resources/Images/Salon/11.jpg';
 import services from './Resources/JSON/Services.json';
+import {Container} from 'react-bootstrap';
 
 function Services(){
     return(
-        <div className="Services">
-           <div className="jumbotron" style={{backgroundImage:`url(${banner})`, backgroundPosition: "center",backgroundRepeat: "no-repeat",backgroundSize: "cover", minHeight:"7.5rem"}}>
+        <Container fluid className="Services">
+           <Container fluid className="jumbotron" style={{backgroundImage:`url(${banner})`, backgroundPosition: "center",backgroundRepeat: "no-repeat",backgroundSize: "cover", minHeight:"7.5rem"}}>
                 <h1 className="display-4" style={{fontSize: "3em", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000", color:"white"}}>Services</h1>
                 <hr className="my-4" />
-            </div>
-            <div className="container">
-            <div class="card border-light mb-3">
-              <div class="card-body">
+            </Container>
+            <Container fluid className="container">
+            <Container fluid class="card border-light mb-3">
+              <Container fluid class="card-body">
                 <p class="card-text">Below is a list of services our stylists provide. Please inquire with individual stylists for estimates.</p>
-              </div>
-            </div>
+              </Container>
+            </Container>
               <table className="table table-hover">
                 <thead>
                   <tr>
@@ -31,8 +32,8 @@ function Services(){
                   })}
                   </tbody>
               </table>
-            </div>
-        </div>
+            </Container>
+        </Container>
 
     );
 }

@@ -7,7 +7,6 @@ import Stack from 'react-bootstrap/Stack';
 
 function StylistRow({data}){
   let fontSize ="1em";
-  console.log(window.innerWidth<=320)
   switch(true)
 {
   case (window.innerWidth>=400):  fontSize = "1em"; break;

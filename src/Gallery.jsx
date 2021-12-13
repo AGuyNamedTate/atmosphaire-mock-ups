@@ -29,8 +29,6 @@ function Gallery(){
       <Carousel  style={{maxHeight:"70rem"}}>
         {
           Object.keys(images).map((key, index)=>{
-            console.log(key);
-            console.log(images[key]);
           
             return(<Container fluid key={index} style={{marginLeft:"auto", marginRight:"auto"}}>
                <img src={images[key].default} alt={key} style={{width:"100%", height:"auto", maxHeight:"68rem", maxWidth:"70rem"}} />

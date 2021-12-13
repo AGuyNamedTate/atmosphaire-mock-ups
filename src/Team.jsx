@@ -8,7 +8,6 @@ import {isSafari } from 'react-device-detect';
 
 
 function CustomCarousel({portfolio}){
-  console.log(isSafari)
   return(
       <Carousel style={{height: '100%'}} showThumbs={false} showIndicators={false} >
         {

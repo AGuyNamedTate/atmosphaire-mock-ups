@@ -7,12 +7,13 @@ import { Carousel } from 'react-responsive-carousel';
 
 
 function CustomCarousel({portfolio}){
+  //width:"60%", , size:'cover'
   return(
       <Carousel style={{height: '100%'}} showThumbs={false} showIndicators={false} >
         {
           portfolio.map((media) =>
             <Container fluid key={media.key} style={{marginLeft:"auto", marginRight:"auto"}}>
-              <media.tag src={process.env.PUBLIC_URL+`/TeamPictures/${media.src}`} alt={media.alt} style={{width:"60%", size:'cover'}} controls/>
+              <media.tag src={process.env.PUBLIC_URL+`/TeamPictures/${media.src}`} alt={media.alt} style={{width:media.tag ==='img' ? "100%" : "60%"}} controls/>
             </Container>
         )}
       </Carousel>
@@ -22,14 +23,22 @@ function CustomCarousel({portfolio}){
 function Bio({data}){
   var leftRight = data.key % 2 ===0;
   var hasBio = data.bio !=="";
-  var displayMedia = !(window.innerWidth < 700 && data.media[0].tag === "img")
+  var stack = (window.innerWidth < 650 && data.media[0].tag === "img")
     return (
         <Container fluid className={data.name}>
             <Container fluid className="card" style={{maxHeight:"100%"}}>
               <h3 className="card-header" style={{textAlign: leftRight ? 'left' : 'right'}}>{data.name}</h3>
-              {leftRight ?
+              {stack ?
+               <Stack style={{maxWidth:"100%", }}>
+                 {<Container fluid style={{width: hasBio ? "80%" : "100%" }}>
+                    <CustomCarousel portfolio={data.media} />
+                  </Container>}
+                <Container fluid className="card-body" style={{width: hasBio ? "55%" : "0px", textAlign:"left", fontSize: "1.1em"}}>
+                    <p className="card-text bio">{data.bio}</p>
+                </Container>
+              </Stack> : leftRight ?
                (<Row style={{maxWidth:"100%", }}>
-                 {displayMedia &&<Container fluid style={{width: hasBio ? "35%" : "100%" }}>
+                 {<Container fluid style={{width: hasBio ? "35%" : "100%" }}>
                     <CustomCarousel portfolio={data.media} />
                   </Container>}
                 <Container fluid className="card-body" style={{width: hasBio ? "55%" : "0px", textAlign:"left", fontSize: "1.5em"}}>
@@ -41,9 +50,9 @@ function Bio({data}){
                   <Container fluid className="card-body" style={{width: hasBio ? "55%" : "0px", textAlign:"left", fontSize: "1.5em"}}>
                       <p className="card-text bio">{data.bio}</p>
                   </Container>
-                  {displayMedia && <Container fluid style={{width: hasBio ? "40%" : "100%"}}>
+                  <Container fluid style={{width: hasBio ? "40%" : "100%"}}>
                     <CustomCarousel portfolio={data.media} />
-                  </Container>}
+                  </Container>
                 </Row>)}
                 <Row style={{maxWidth:"100%", maxHeight:"100%", width:"60%", marginLeft: (leftRight ? "auto" :"3%"), marginRight: (leftRight ? "3%" :"auto")}}>
                     {data.contacts.map((contact) =>{
@@ -53,6 +62,7 @@ function Bio({data}){
                       return(<Col key={contact.key}><span className="badge rounded-pill bg-primary"><a href={contact.src} className="card-link" style={{color:"white"}}>{contact.name}</a></span></Col>)
                     })} 
                 </Row>
+                <br/>
             </Container>
         </Container>
     );

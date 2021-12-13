@@ -9,19 +9,19 @@ function importAll(r) {
     return images;
 }
   
-const images = importAll(require.context('./Resources/Images/Salon', false, /\.(png|jpe?g|svg)$/));
+const images = importAll(require.context('./Resources/Images/Home', false, /\.(png|jpe?g|svg)$/));
 
 function PromoPreview(){
 
     return(
         <Container fluid style={{maxHeight:"500px"}}>
-            <Carousel autoplay={true} showThumbs={false} infiniteLoop={true} style={{maxHeight:"500px"}}>
+            <Carousel autoplay={true} showThumbs={false} infiniteLoop={true} style={{maxHeight:"500px"}} dynamicHeight={false}>
                 {
                 Object.keys(images).map((key, index)=>{
             
                 return(
-                    <Container fluid key={index} style={{marginLeft:"auto", marginRight:"auto",maxHeight:"500px"}} >
-                        <img src={images[key].default} alt={key} style={{width:"100%", height:"auto", maxHeight:"68rem", maxWidth:"70rem"}} />
+                    <Container fluid key={index} style={{marginLeft:"auto", marginRight:"auto", maxHeight:"500px"}} >
+                        <img src={images[key].default} alt={key} style={{ maxWidth:"900px", objectFit: 'contain'}} />
                     </Container>)})}
             </Carousel>
         </Container>

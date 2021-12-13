@@ -7,13 +7,12 @@ import { Carousel } from 'react-responsive-carousel';
 
 
 function CustomCarousel({portfolio}){
-  //width:"60%", , size:'cover'
   return(
       <Carousel style={{height: '100%'}} showThumbs={false} showIndicators={false} >
         {
           portfolio.map((media) =>
             <Container fluid key={media.key} style={{marginLeft:"auto", marginRight:"auto"}}>
-              <media.tag src={process.env.PUBLIC_URL+`/TeamPictures/${media.src}`} alt={media.alt} style={{width:media.tag ==='img' ? "100%" : "60%"}} controls/>
+              <media.tag src={process.env.PUBLIC_URL+`/TeamPictures/${media.src}`} alt={media.alt} style={{width:media.tag ==='img' ? "100%" : "60%"}} controls={media.tag !=="img" ? true : false} playsInLine={media.tag !=="img" ? true : false} />
             </Container>
         )}
       </Carousel>

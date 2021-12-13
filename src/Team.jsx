@@ -4,15 +4,18 @@ import  {Container, Row, Col} from 'react-bootstrap';
 import Stack from 'react-bootstrap/Stack';
 import banner from './Resources/Images/Salon/10.jpg';
 import { Carousel } from 'react-responsive-carousel';
+import {isSafari } from 'react-device-detect';
 
 
 function CustomCarousel({portfolio}){
+  console.log(isSafari)
   return(
       <Carousel style={{height: '100%'}} showThumbs={false} showIndicators={false} >
         {
           portfolio.map((media) =>
             <Container fluid key={media.key} style={{marginLeft:"auto", marginRight:"auto"}}>
-              <media.tag src={process.env.PUBLIC_URL+`/TeamPictures/${media.src}`} alt={media.alt} style={{width:media.tag ==='img' ? "100%" : "60%"}} controls={media.tag !=="img" ? true : false} playsInLine={media.tag !=="img" ? true : false} />
+              {media.tag !=="img" && isSafari ? (<p>Your browser does not support this media</p>) :(<media.tag src={process.env.PUBLIC_URL+`/TeamPictures/${media.src}`} alt={media.alt} style={{width:media.tag ==='img' ? "100%" : "60%"}} controls={media.tag !=="img" ? true : false} playsInline={media.tag !=="img" ? true : false} />)}
+              
             </Container>
         )}
       </Carousel>
